@@ -1,0 +1,15 @@
+name: Deploy to Github pages
+
+on push:
+  # this is the branch you develop site
+  branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run a multi-line script
+      run: |
+        echo test the checkout action,
+        ls -a
